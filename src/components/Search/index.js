@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SearchDogs from '../../redux/actions/dogActions.js'
 import { TextField, Button } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -7,6 +8,8 @@ const useStyles = makeStyles((theme) => ({
     '& .MuiTextField-root': {
       margin: theme.spacing(1),
       width: '25ch',
+      textAlign: 'center',
+      //padding: '5%',
     },
   },
 }));
@@ -18,7 +21,9 @@ export default function FormPropsTextFields() {
 
   const handleChange = (event) => {
      setDogName(event.target.value)
-    console.log(dogName);
+      console.log(dogName);
+
+      //SearchDogs(dogName)
   }
 
   return (
