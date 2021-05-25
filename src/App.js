@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+
+import react, { useState, useReducer, useEffect } from 'react'
+import { dogsReducer, initialState } from './redux/reducers'
+import getData from './redux/actions/dogActions.js'
 
 function App() {
+  const [{dogs, loading}, dispatch] = useReducer(dogsReducer, initialState)
+  console.log(dogs);
+
+  useEffect(() => {
+    getData(dispatch)
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <select name="dogs" id="dog">
+        {Object.keys(dogs).map(i => {
+          return <option value={i}>{i}</option>
+        })}
+      </select>
     </div>
   );
 }

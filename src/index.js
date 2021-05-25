@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux'
+//import store from './redux/store'
+import { createStore } from 'redux'
+import {dogsReducer} from './redux/reducers'
+
+//const {store} = createStore(dogsReducer)
 
 ReactDOM.render(
   <React.StrictMode>
