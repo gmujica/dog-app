@@ -1,4 +1,3 @@
-import { Search } from '@material-ui/icons';
 import Axios from 'axios';
 import { GET_DATA_REQUEST, GET_DATA_SUCCESS, GET_DATA_ERROR } from '../constants'
 
