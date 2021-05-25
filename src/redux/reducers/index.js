@@ -16,6 +16,14 @@ const initialState = {
             loading:false
 
         }
+        case GET_DATA_REQUEST:
+        return {
+            ...state,
+            dogs:action.payload,
+            loading:false
+
+        }
+
         default: return state
     }
 

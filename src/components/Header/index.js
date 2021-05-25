@@ -32,7 +32,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             Dogs App
           </Typography>
-          <Button color="inherit">GitHub</Button>
+          <Button color="inherit" target="_blank" href="https://github.com/gmujica/dog-app">GitHub</Button>
         </Toolbar>
       </AppBar>
     </div>
