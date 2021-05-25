@@ -1,10 +1,3 @@
-/*import { combineReducers } from 'redux'
-import userReducer from './usersReducer'
-
-export default combineReducers({
-  users: userReducer
-})*/
-
 import { GET_DATA_REQUEST, GET_DATA_SUCCESS, GET_DATA_ERROR } from '../constants'
 
 const initialState = {
