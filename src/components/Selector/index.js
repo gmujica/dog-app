@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Selector() {
     const [{dogs, loading}, dispatch] = useReducer(dogsReducer, initialState)
-    const [currency, setCurrency] = useState('Select');
+    const [race, setRace] = useState('Select');
     const classes = useStyles();
     console.log(dogs);
 
@@ -25,9 +25,9 @@ function Selector() {
         getData(dispatch)
       }, []);
 
-      const handleChange = (event) => {
-        setCurrency(event.target.value);
-        console.log(currency);
+      const handleChange = (e) => {
+        setRace(e.target.value);
+        console.log(race);
       };
 
     return (
@@ -36,15 +36,15 @@ function Selector() {
                 id="standard-select-currency"
                 select
                 label="Select"
-                value={currency}
+                value={race}
                 onChange={handleChange}
                 helperText="Please select your search"
                 >
                 {Object.keys(dogs).map(i => {
-                    return <MenuItem  value={i}>{i}</MenuItem>
+                    return <MenuItem value={i}>{i}</MenuItem>
                 })}
             </TextField>
-            <Card value={currency} />
+            <Card value={race} />
         </div>
     )
 }

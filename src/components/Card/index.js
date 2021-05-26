@@ -43,7 +43,7 @@ export default function MediaCard({ value }) {
         <Button size="small" color="primary">
             sub-race: {value}
         </Button>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" onClick={()=> alert('Modal')}>
           Learn More
         </Button>
       </CardActions>
