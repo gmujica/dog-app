@@ -17,11 +17,12 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard() {
+export default function MediaCard({ value }) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <div style={{textAlign: '-webkit-center'}}>
+        <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -30,7 +31,7 @@ export default function MediaCard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {value}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -40,12 +41,13 @@ export default function MediaCard() {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+            sub-race: {value}
         </Button>
         <Button size="small" color="primary">
           Learn More
         </Button>
       </CardActions>
     </Card>
+    </div>
   );
 }
