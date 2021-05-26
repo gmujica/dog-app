@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Modal from '../Modal'
 
 const useStyles = makeStyles({
   root: {
@@ -43,9 +44,7 @@ export default function MediaCard({ value }) {
         <Button size="small" color="primary">
             sub-race: {value}
         </Button>
-        <Button size="small" color="primary" onClick={()=> alert('Modal')}>
-          Learn More
-        </Button>
+        <Modal />
       </CardActions>
     </Card>
     </div>

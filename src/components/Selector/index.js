@@ -20,6 +20,7 @@ function Selector() {
     const [race, setRace] = useState('Select');
     const classes = useStyles();
     console.log(dogs);
+    console.log(race);
 
     useEffect(() => {
         getData(dispatch)
@@ -27,7 +28,6 @@ function Selector() {
 
       const handleChange = (e) => {
         setRace(e.target.value);
-        console.log(race);
       };
 
     return (
