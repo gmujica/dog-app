@@ -22,7 +22,7 @@ export default dispatch => {
 
 export function SearchDogs({dogName}) {
     return dispatch => {
-        return Axios.post(`https://dog.ceo/api/breed/${dogName}/images/random/posts`)
+        return Axios.get(`https://dog.ceo/api/breed/${dogName}/images/random/posts`)
         .then((res) => {
             /// callback
 
